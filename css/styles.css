@@ -652,6 +652,20 @@ img {
   border-radius: 4px;
   transition: transform var(--modal-transition), opacity var(--modal-transition),
     visability var(--modal-transition);
+  padding: 40px;
+}
+
+.modal-title {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.modal-field {
+  margin-bottom: 15px;
 }
 
 .backdrop.is-hidden .modal {
