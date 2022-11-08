@@ -18,7 +18,7 @@
   --indent: 30px;
   --items: 3;
   /* transion */
-  --modal-transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --modal-transition: 1500ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -30,6 +30,10 @@ body {
   line-height: 1.5;
   letter-spacing: 0.03em;
   background-color: var(--white-cl);
+}
+
+textarea {
+  resize: none;
 }
 
 span {
@@ -688,6 +692,7 @@ img {
   line-height: 23px;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 12px;
 }
 
 .modal-field {
@@ -695,9 +700,7 @@ img {
 }
 
 .modal-label {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
+  font-family: var(--main-font);
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
@@ -736,7 +739,69 @@ img {
   left: 5px;
 }
 
-.modal-coment {
+.modal-comment {
   width: 100%;
   height: 120px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  font-family: var(--main-font);
+  color: rgba(117, 117, 117, 0.5);
+  padding: 12px 16px;
+  outline-color: transparent;
+}
+
+.modal-comment:focus {
+  color: var(--accent-txt-cl);
+  border: 2px solid var(--accent-txt-cl);
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.checkbox-text {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-text .privacy-check-span {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--black-cl);
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+/* .input-checkbox:checked + .checkbox-text::before {
+  background-color: var(--accent-txt-cl);
+  background-image: url(../images/modal/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: transparent;
+}  */
+
+.checkbox-span {
+  color: var(--accent-txt-cl);
+}
+
+.modal-container-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-btn {
+  width: 200px;
+  height: 50px;
+  color: var(--white-cl);
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid var(--accent-txt-cl);
+  padding: 10px 52px;
 }
