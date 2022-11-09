@@ -657,6 +657,13 @@ img {
   justify-content: center;
   padding: 0;
   cursor: pointer;
+  outline-color: transparent;
+}
+
+.backdrop-btn:focus,
+.backdrop-btn:hover {
+  border: 2px solid var(--accent-txt-cl);
+  transition: var(--transition);
 }
 
 .backdrop.is-hidden .modal {
@@ -699,6 +706,13 @@ img {
   margin-bottom: 10px;
 }
 
+.privacy-modal-field {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-left: 14px;
+  padding-right: 11px;
+}
+
 .modal-label {
   font-family: var(--main-font);
   font-size: 12px;
@@ -727,6 +741,8 @@ img {
   transition: var(--transition);
 }
 
+/* щоб фокус на вікні вводу ціпляв зміну 
+кольору іконки  */
 .modal-input:focus + .modal-input-icon {
   fill: var(--accent-txt-cl);
   transition: var(--transition);
@@ -775,18 +791,33 @@ img {
   border: 2px solid var(--black-cl);
   border-radius: 2px;
   margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+/* при натисканні на галочку відбувається зміна кольору бекграунда та галочки */
+.input-checkbox:checked + .checkbox-text .privacy-check-span {
+  background-color: var(--accent-txt-cl);
+  border-color: transparent;
+  fill: var(--white-cl);
+  transition: var(--modal-transition);
+}
+/* при фокусі буде краситись рамочка */
+.input-checkbox:focus + .checkbox-text .privacy-check-span,
+.input-checkbox:hover + .checkbox-text .privacy-check-span {
+  border-color: var(--accent-txt-cl);
+  transition: var(--modal-transition);
 }
 
-/* .input-checkbox:checked + .checkbox-text::before {
-  background-color: var(--accent-txt-cl);
-  background-image: url(../images/modal/check.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  border-color: transparent;
-}  */
+.privacy-check-icon {
+  position: absolute;
+}
 
 .checkbox-span {
   color: var(--accent-txt-cl);
+  text-decoration-line: underline;
+  padding-left: 5px;
 }
 
 .modal-container-button {
