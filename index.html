@@ -567,8 +567,8 @@
           </div>
           <div class="footer-online-container">
             <form>
-              <h3 class="footer-online-title">Підпишіться на розсилку</h3>
-              <label for="footer-email">
+              <label class="footer-online-title">Підпишіться на розсилку</label>
+              <div class="footer-emailbutton">
                 <input
                   type="email"
                   id="footer-email"
@@ -576,7 +576,13 @@
                   class="footer-online-input"
                   placeholder="E-mail"
                 />
-              </label>
+                <button type="submit" class="footer-submit-button">
+                  Підписатися
+                  <svg class="online-submit-svg" width="24" height="24">
+                    <use href="./images/icons.svg#footer-online-submit"></use>
+                  </svg>
+                </button>
+              </div>
             </form>
           </div>
         </div>
